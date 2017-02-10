@@ -73,11 +73,22 @@ function tablestyle($caption, $text, $id='', $info=array())
 		return;
 	}
 
-	/*
-	if($id == 'wm') // Example - If rendered from 'welcome message'
+	if($id == 'wm') // Welcome Message
 	{
-
+		echo '
+		<section id="content">
+			<div class="container">
+				<div class="row">
+					<div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+					'.$text.'
+					</div>
+				</div>
+			</div>
+		</section>
+		';
+		return;
 	}
+	/*
 
 	if($id == 'featurebox') // Example - If rendered from 'featurebox'
 	{
@@ -444,6 +455,8 @@ $LAYOUT['custom_home'] =  <<<TMPL
             <i class="fa fa-chevron-right"></i>
         </a>
     </section><!--/#main-slider-->
+	
+	{WMESSAGE}
 
     <section id="feature" >
         <div class="container">
