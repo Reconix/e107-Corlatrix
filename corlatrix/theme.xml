@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="Corlatrix" lan="" version="1.0" date="1486670442" compatibility="2.0" livedemo="">
+	<author name="Reconix" url="http://www.reconix.net" />
+	<summary lan="">Corlatrix Free Responsive Business Theme</summary>
+	<description lan="">Free bootstrap theme based off Corlate</description>
+	<category>corporate</category>
+	<keywords>
+		<word>business</word>
+		<word>free</word>
+	</keywords>
+	<copyright>shapebootstrap</copyright>
+	<screenshots>
+		<image>preview_frontend.png</image>
+		<image>preview_frontend.png</image>
+	</screenshots>
+	<layouts>
+		<layout name='default' title='Default' default='true' />	
+	</layouts>
+</e107Theme>
