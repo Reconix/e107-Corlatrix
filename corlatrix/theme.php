@@ -376,6 +376,8 @@ TMPL;
 $LAYOUT['custom_home'] =  <<<TMPL
 	
 	{ALERTS}
+	
+	{FEATUREBOX}
 
     <section id="main-slider" class="no-margin">
         <div class="carousel slide">
