@@ -19,7 +19,7 @@ if(!defined('e107_INIT'))
 define("BOOTSTRAP", 3);
 define("FONTAWESOME", 4);
 
-//e107::library('load', 'bootstrap');
+e107::library('load', 'bootstrap');
 e107::library('load', 'fontawesome');
 
 /* @example prefetch  */
@@ -27,8 +27,8 @@ e107::library('load', 'fontawesome');
 //e107::js("footer-inline", 	"$('.e-tip').tooltip({container: 'body'})"); // activate bootstrap tooltips.
 
 //CSS
-e107::css('theme', 'css/bootstrap.min.css');
-e107::css('theme', 'css/font-awesome.min.css');
+//e107::css('theme', 'css/bootstrap.min.css');
+//e107::css('theme', 'css/font-awesome.min.css');
 e107::css('theme', 'css/animate.min.css');
 e107::css('theme', 'css/prettyPhoto.css');
 e107::css('theme', 'css/main.css');
@@ -378,85 +378,6 @@ $LAYOUT['custom_home'] =  <<<TMPL
 	{ALERTS}
 	
 	{FEATUREBOX}
-
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-
-                <div class="item active" style="background-image: url({SITEURL}e107_themes/corlatrix/images/slider/bg1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="{SITEURL}e107_themes/corlatrix/images/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url({SITEURL}e107_themes/corlatrix/images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="{SITEURL}e107_themes/corlatrix/images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url({SITEURL}e107_themes/corlatrix/images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="{SITEURL}e107_themes/corlatrix/images/slider/img3.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
-    </section><!--/#main-slider-->
 	
 	{WMESSAGE}
 
@@ -983,11 +904,122 @@ $LAYOUT['custom_home'] =  <<<TMPL
 
 TMPL;
 
-//TODO Add {GALLERY_PORTFOLIO}  to portfolio_menu.php
-$LAYOUT['blog'] =  <<<TMPL
+//------------------------------=[ News / Blog ]=------------------------------\\
+$LAYOUT['news'] =  <<<TMPL
 
-
+    <section id="blog" class="container">
+        <div class="center">
+            <h2>Blogs</h2>
+            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+        </div>
+		
+		<div class="blog">
+            <div class="row">
+                <div class="col-md-8">
 	{---}
+                </div><!--/.col-md-8-->
+	
+	
+	
+                <aside class="col-md-4">
+                    <div class="widget search">
+                        <form role="form">
+                                <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
+                        </form>
+                    </div><!--/.search-->
+    				
+    				<div class="widget categories">
+                        <h3 class="border-bottom-grad"><i class="fa fa-comment-o"></i> Recent Comments</h3>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="single_comments">
+                                    <img src="images/blog/avatar3.png" alt=""  />
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                                    <div class="entry-meta small muted">
+                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
+                                    </div>
+                                </div>
+                                <div class="single_comments">
+                                    <img src="images/blog/avatar3.png" alt=""  />
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                                    <div class="entry-meta small muted">
+                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
+                                    </div>
+                                </div>
+                                <div class="single_comments">
+                                    <img src="images/blog/avatar3.png" alt=""  />
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                                    <div class="entry-meta small muted">
+                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>                     
+                    </div><!--/.recent comments-->
+                     
+
+                    <div class="widget categories">
+                        <h3 class="border-bottom-grad"><i class="fa fa-folder-open-o"></i> Categories</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="blog_category">
+                                    <li><a href="#">Computers <span class="badge">04</span></a></li>
+                                    <li><a href="#">Smartphone <span class="badge">10</span></a></li>
+                                    <li><a href="#">Gedgets <span class="badge">06</span></a></li>
+                                    <li><a href="#">Technology <span class="badge">25</span></a></li>
+                                </ul>
+                            </div>
+                        </div>                     
+                    </div><!--/.categories-->
+    				
+    				<div class="widget archieve">
+                        <h3 class="border-bottom-grad"><i class="fa fa-archive"></i> Archieve</h3>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="blog_archieve">
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2013 <span class="pull-right">(97)</span></a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2013 <span class="pull-right">(32)</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> October 2013 <span class="pull-right">(19)</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2013 <span class="pull-right">(08)</a></li>
+                                </ul>
+                            </div>
+                        </div>                     
+                    </div><!--/.archieve-->
+    				
+                    <div class="widget tags">
+                        <h3 class="border-bottom-grad"><i class="fa fa-tags"></i> Tag Cloud</h3>
+                        <ul class="tag-cloud">
+                            <li><a class="btn btn-xs btn-primary" href="#">Apple</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Barcelona</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Office</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Ipod</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Stock</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Race</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">London</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Football</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Porche</a></li>
+                            <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
+                        </ul>
+                    </div><!--/.tags-->
+    				
+    				<div class="widget blog_gallery">
+                        <h3 class="border-bottom-grad"><i class="fa fa-archive"></i> Our Gallery</h3>
+                        <ul class="sidebar-gallery">
+                            <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
+                        </ul>
+                    </div><!--/.blog_gallery-->
+    			</aside> 
+	
+	
+            </div><!--/.row-->
+        </div><!--/.blog-->
+    </section><!--/#blog-->
 
 
 

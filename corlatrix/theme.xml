@@ -18,5 +18,9 @@
 		<layout name='custom_home' title='Custom Home Page' default='false'>
 			<custompages>FRONTPAGE</custompages>	
 		</layout>
+		<layout name='news' title='News / Blog Page'>
+			<custompages>news</custompages>
+			<custompages>/news/</custompages>
+		</layout>
 	</layouts>
 </e107Theme>
