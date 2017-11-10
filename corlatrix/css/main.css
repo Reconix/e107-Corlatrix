@@ -2454,7 +2454,8 @@ ul.sidebar-gallery {
 }
 
 .reply_section .media-body{
-  display:inherit;
+   padding: 30px 15px 10px 0px;
+   display: contents;
 }
 
 .comment_section .media-body{
