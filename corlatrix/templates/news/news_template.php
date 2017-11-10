@@ -2,7 +2,7 @@
 /**
  * Copyright (C) e107 Inc (e107.org), Licensed under GNU GPL (http://www.gnu.org/licenses/gpl.txt)
  * $Id$
- * 
+ *
  * News default templates
  */
 
@@ -18,11 +18,11 @@ $NEWS_MENU_TEMPLATE['list']['start']       = '<div class="thumbnails">';
 $NEWS_MENU_TEMPLATE['list']['end']         = '</div>';
 
 
-// XXX The ListStyle template offers a listed summary of items with a minimum of 10 items per page. 
-// As displayed by news.php?cat.1 OR news.php?all 
-// {NEWSBODY} should not appear in the LISTSTYLE as it is NOT the same as what would appear on news.php (no query) 
+// XXX The ListStyle template offers a listed summary of items with a minimum of 10 items per page.
+// As displayed by news.php?cat.1 OR news.php?all
+// {NEWSBODY} should not appear in the LISTSTYLE as it is NOT the same as what would appear on news.php (no query)
 
-// Template/CSS to be reviewed for best bootstrap implementation 
+// Template/CSS to be reviewed for best bootstrap implementation
 $NEWS_TEMPLATE['list']['caption']	= '{NEWSCATEGORY}';
 $NEWS_TEMPLATE['list']['start']	= '{SETIMAGE: w=400&h=350&crop=1}';
 $NEWS_TEMPLATE['list']['end']	= '';
@@ -58,7 +58,7 @@ $NEWS_TEMPLATE['list']['item']	= '
 
 
 // XXX As displayed by news.php (no query) or news.php?list.1.1 (ie. regular view of a particular category)
-//XXX TODO GEt this looking good in the default Bootstrap theme. 
+//XXX TODO GEt this looking good in the default Bootstrap theme.
 /*
 $NEWS_TEMPLATE['default']['item'] = '
 	{SETIMAGE: w=400}
@@ -121,19 +121,19 @@ $NEWS_TEMPLATE['default']['item'] = '
                                     <span id="publish_date">{NEWSDATE=short}</span>
                                     <span><i class="fa fa-user"></i> {NEWSAUTHOR}</span>
 									<span>{GLYPH=folder-open} {NEWSCATEGORY}</span>
-                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                    <span>{NEWSCOMMENTS} Comments</span>
                                 </div>
                             </div>
-                                
+
                             <div class="col-xs-12 col-sm-10 blog-content">
 								{SETIMAGE: w=620&h=294}
 								{NEWSIMAGE: item=1}
                                 <h2>{NEWS_TITLE: link=1}</h2>
                                 <h3>{NEWS_SUMMARY}</h3>
-                                <a class="btn btn-primary readmore" href="blog-item.html">Read More <i class="fa fa-angle-right"></i></a>
+                                <a class="btn btn-primary readmore" href="{NEWSURL}">Read More <i class="fa fa-angle-right"></i></a>
 								{ADMINOPTIONS: class=btn btn-default}
                             </div>
-                        </div>    
+                        </div>
                     </div><!--/.blog-item-->
 ';
 
@@ -177,7 +177,7 @@ $NEWS_WRAPPER['view']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{---
 
 			<br />
 			{SETIMAGE: w=400&h=400}
-			
+
 			<div class="row  news-images-1">
         		<div class="col-md-6">{NEWSIMAGE: item=2}</div>
         		<div class="col-md-6">{NEWSIMAGE: item=3}</div>
@@ -186,19 +186,19 @@ $NEWS_WRAPPER['view']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{---
         		<div class="col-md-6">{NEWSIMAGE: item=4}</div>
         		<div class="col-md-6">{NEWSIMAGE: item=5}</div>
             </div>
-            
+
             {NEWSVIDEO: item=4}
 			{NEWSVIDEO: item=5}
-			
+
            <div class="body-extended text-justify">
 				{NEWS_BODY=extended}
 			</div>
-			
-			
+
+
 		</div>
 
 		<hr>
-		
+
 		<div class="options hidden-print ">
 			<div class="btn-group">{NEWSCOMMENTLINK: glyph=comments&class=btn btn-default}{PRINTICON: class=btn btn-default}{ADMINOPTIONS: class=btn btn-default}{SOCIALSHARE}</div>
 		</div>
@@ -213,34 +213,34 @@ $NEWS_TEMPLATE['view']['item'] = '
 
                    <div class="blog-item">
 						{NEWSIMAGE: item=1}
-                            <div class="row">  
-                                <div class="col-xs-12 col-sm-2 text-center">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3 text-center">
                                     <div class="entry-meta">
                                         <span id="publish_date">07  NOV</span>
-                                        <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                        <span><i class="fa fa-user"></i> {NEWSAUTHOR}</span>
+                                        <span><i class="fa fa-comment"></i> {NEWSCOMMENTS}</span>
                                         <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
 										<br/>
 										{ADMINOPTIONS: class=btn btn-default}
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-10 blog-content">
+                                <div class="col-xs-12 col-sm-9 blog-content">
                                     <h2>{NEWS_TITLE: link=1}</h2>
                                     {NEWS_SUMMARY}
 
                                     <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper.</p>
 
                                     <div class="post-tags">
-                                        <strong>Tag:</strong> <a href="#">Cool</a> / <a href="#">Creative</a> / <a href="#">Dubttstep</a>
+                                        <strong>Tags:</strong> {NEWSTAGS}
                                     </div>
-									
+
 
                                 </div>
                             </div>
                     </div><!--/.blog-item-->
 					<div class="blog-item">
 						{NEWS_BODY=body}
-						
+
 						<div class="news-videos-1">
 						{NEWSVIDEO: item=1}
 						{NEWSVIDEO: item=2}
@@ -250,7 +250,7 @@ $NEWS_TEMPLATE['view']['item'] = '
 
 						<br />
 						{SETIMAGE: w=400&h=400}
-						
+
 						<div class="row  news-images-1">
 							<div class="col-md-6">{NEWSIMAGE: item=2}</div>
 							<div class="col-md-6">{NEWSIMAGE: item=3}</div>
@@ -259,21 +259,21 @@ $NEWS_TEMPLATE['view']['item'] = '
 							<div class="col-md-6">{NEWSIMAGE: item=4}</div>
 							<div class="col-md-6">{NEWSIMAGE: item=5}</div>
 						</div>
-						
+
 						{NEWSVIDEO: item=4}
 						{NEWSVIDEO: item=5}
-						
+
 					   <div class="body-extended text-justify">
 							{NEWS_BODY=extended}
 						</div>
-						
-						
-						
+
+
+
 					</div><!--/.blog-item-->
-                        
+
                         <div class="media reply_section">
                             <div class="pull-left post_reply text-center">
-                                <a href="#"><img src="images/blog/boy.png" class="img-circle" alt="" /></a>
+								{NEWS_AUTHOR_AVATAR: shape=circle}
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -281,12 +281,12 @@ $NEWS_TEMPLATE['view']['item'] = '
                                 </ul>
                             </div>
                             <div class="media-body post_reply_content">
-                                <h3>Antone L. Huges</h3>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturp</p>
-                                <p><strong>Web:</strong> <a href="http://www.shapebootstrap.net">www.shapebootstrap.net</a></p>
+                                <h3>{NEWSAUTHOR}</h3>
+                                {NEWS_AUTHOR_SIGNATURE}
+                                <p><strong>Web:</strong> <a href="#">website ?</a></p>
                             </div>
-                        </div> 
-                        
+                        </div>
+
                         <h1 id="comments_title">5 Comments</h1>
                         <div class="media comment_section">
                             <div class="pull-left post_comments">
@@ -298,7 +298,7 @@ $NEWS_TEMPLATE['view']['item'] = '
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                                 <a href="#">Reply</a>
                             </div>
-                        </div> 
+                        </div>
                         <div class="media comment_section">
                             <div class="pull-left post_comments">
                                 <a href="#"><img src="images/blog/boy2.png" class="img-circle" alt="" /></a>
@@ -309,7 +309,7 @@ $NEWS_TEMPLATE['view']['item'] = '
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                                 <a href="#">Reply</a>
                             </div>
-                        </div> 
+                        </div>
                         <div class="media comment_section">
                             <div class="pull-left post_comments">
                                 <a href="#"><img src="images/blog/boy3.png" class="img-circle" alt="" /></a>
@@ -320,7 +320,7 @@ $NEWS_TEMPLATE['view']['item'] = '
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                                 <a href="#">Reply</a>
                             </div>
-                        </div> 
+                        </div>
 
 
                         <div id="contact-page clearfix">
@@ -328,8 +328,8 @@ $NEWS_TEMPLATE['view']['item'] = '
                             <div class="message_heading">
                                 <h4>Leave a Replay</h4>
                                 <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
-                            </div> 
-      
+                            </div>
+
                             <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
                                 <div class="row">
                                     <div class="col-sm-5">
@@ -344,19 +344,19 @@ $NEWS_TEMPLATE['view']['item'] = '
                                         <div class="form-group">
                                             <label>URL</label>
                                             <input type="url" class="form-control">
-                                        </div>                    
+                                        </div>
                                     </div>
-                                    <div class="col-sm-7">                        
+                                    <div class="col-sm-7">
                                         <div class="form-group">
                                             <label>Message *</label>
                                             <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
-                                        </div>                        
+                                        </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>     
+                            </form>
                         </div><!--/#contact-page-->
 
 	<hr />
@@ -383,7 +383,7 @@ $NEWS_TEMPLATE['view']['item'] = '
 //$NEWS_MENU_TEMPLATE['view']['separator']   = '<br />';
 
 
-###### news_categories.sc 
+###### news_categories.sc
 $NEWS_TEMPLATE['category']['body'] = '
 	<div style="padding:5px"><div style="border-bottom:1px inset black; padding-bottom:1px;margin-bottom:5px">
 	{NEWSCATICON}&nbsp;{NEWSCATEGORY}
