@@ -28,34 +28,27 @@ $NEWS_TEMPLATE['list']['start']	= '{SETIMAGE: w=400&h=350&crop=1}';
 $NEWS_TEMPLATE['list']['end']	= '';
 $NEWS_TEMPLATE['list']['item']	= '
 
-		<div class="row row-fluid">
-				<div class="span3 col-md-3">
-                   <div class="thumbnail">
-                        {NEWSTHUMBNAIL=placeholder}
-                    </div>
-				</div>
-				<div class="span9 col-md-9">
-                   <h3 class="media-heading">{NEWS_TITLE: link=1}</h3>
-                      <p>
-                       	{NEWS_SUMMARY}
-					</p>
-                    <p>
-                       <a href="{NEWSURL}" class="btn btn-small btn-primary">'.LAN_READ_MORE.'</a>
-                   </p>
- 				</div>
+	<div class="row row-fluid">
+		<div class="span3 col-md-3">
+			<div class="thumbnail">
+                {NEWSTHUMBNAIL=placeholder}
+            </div>
 		</div>
-		<hr class="visible-xs" />
+		<div class="span9 col-md-9">
+           <h3 class="media-heading">{NEWS_TITLE: link=1}</h3>
+            <p>
+               	{NEWS_SUMMARY}
+			</p>
+        	<p>
+               <a href="{NEWSURL}" class="btn btn-small btn-primary">'.LAN_READ_MORE.'</a>
+			</p>
+		</div>
+	</div>
+	<hr class="visible-xs" />
 
 ';
 
-
-
-
-
-
 //$NEWS_MENU_TEMPLATE['list']['separator']   = '<br />';
-
-
 
 // XXX As displayed by news.php (no query) or news.php?list.1.1 (ie. regular view of a particular category)
 //XXX TODO GEt this looking good in the default Bootstrap theme.
@@ -81,7 +74,6 @@ $NEWS_TEMPLATE['default']['item'] = '
 */
 
 $NEWS_WRAPPER['default']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{---}</div>';
-
 
 /*
 		{SETIMAGE: w=400&h=400}
@@ -109,47 +101,32 @@ $NEWS_WRAPPER['default']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{
 			<div class="btn-group hidden-print">{NEWSCOMMENTLINK: glyph=comments&class=btn btn-default}{PRINTICON: class=btn btn-default}{PDFICON}{SOCIALSHARE}{ADMINOPTIONS: class=btn btn-default}</div>
 			</div>
 		</div>
-
-
-
 */
 $NEWS_TEMPLATE['default']['item'] = '
-                    <div class="blog-item">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-2 text-center">
-                                <div class="entry-meta">
-                                    <span id="publish_date">{NEWSDATE=short}</span>
-                                    <span><i class="fa fa-user"></i> {NEWSAUTHOR}</span>
-									<span>{GLYPH=folder-open} {NEWSCATEGORY}</span>
-                                    <span>{NEWSCOMMENTS} Comments</span>
-                                </div>
-                            </div>
+    <div class="blog-item">
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 text-center">
+                <div class="entry-meta">
+                    <span id="publish_date">{NEWSDATE=short}</span>
+                    <span><i class="fa fa-user"></i> {NEWSAUTHOR}</span>
+					<span>{GLYPH=folder-open} {NEWSCATEGORY}</span>
+                    <span>{NEWSCOMMENTS} Comments</span>
+                </div>
+            </div>
 
-                            <div class="col-xs-12 col-sm-10 blog-content">
-								{SETIMAGE: w=620&h=294}
-								{NEWSIMAGE: item=1}
-                                <h2>{NEWS_TITLE: link=1}</h2>
-                                <h3>{NEWS_SUMMARY}</h3>
-                                <a class="btn btn-primary readmore" href="{NEWSURL}">Read More <i class="fa fa-angle-right"></i></a>
-								{ADMINOPTIONS: class=btn btn-default}
-                            </div>
-                        </div>
-                    </div><!--/.blog-item-->
+            <div class="col-xs-12 col-sm-10 blog-content">
+				{SETIMAGE: w=620&h=294}
+				{NEWSIMAGE: item=1}
+                <h2>{NEWS_TITLE: link=1}</h2>
+                <h3>{NEWS_SUMMARY}</h3>
+                <a class="btn btn-primary readmore" href="{NEWSURL}">Read More <i class="fa fa-angle-right"></i></a>
+				{ADMINOPTIONS: class=btn btn-default}
+            </div>
+        </div>
+    </div><!--/.blog-item-->
 ';
 
-
-
-###### Default view item (temporary)  ######
-//$NEWS_MENU_TEMPLATE['view']['start']       = '<ul class="nav nav-list news-menu-months">';
-//$NEWS_MENU_TEMPLATE['view']['end']         = '</ul>';
-
-// As displayed by news.php?extend.1
-
-
 $NEWS_WRAPPER['view']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{---}</div>';
-
-
-
 
 /*
 		<h2 class="news-title">{NEWS_TITLE: link=1}</h2>
@@ -194,7 +171,6 @@ $NEWS_WRAPPER['view']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{---
 				{NEWS_BODY=extended}
 			</div>
 
-
 		</div>
 
 		<hr>
@@ -206,158 +182,153 @@ $NEWS_WRAPPER['view']['item']['NEWSIMAGE: item=1'] = '<div class="img-blog">{---
 
 */
 
-
-
 $NEWS_TEMPLATE['view']['item'] = '
 {SETIMAGE: w=750&h=356}
 
-                   <div class="blog-item">
-						{NEWSIMAGE: item=1}
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-3 text-center">
-                                    <div class="entry-meta">
-                                        <span id="publish_date">07  NOV</span>
-                                        <span><i class="fa fa-user"></i> {NEWSAUTHOR}</span>
-                                        <span><i class="fa fa-comment"></i> {NEWSCOMMENTS}</span>
-                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
-										<br/>
-										{ADMINOPTIONS: class=btn btn-default}
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-9 blog-content">
-                                    <h2>{NEWS_TITLE: link=1}</h2>
-                                    {NEWS_SUMMARY}
+	<div class="blog-item">
+		{NEWSIMAGE: item=1}
+		 <div class="row">
+			 <div class="col-xs-12 col-sm-3 text-center">
+				 <div class="entry-meta">
+					 <span id="publish_date">07  NOV</span>
+					 <span><i class="fa fa-user"></i> {NEWSAUTHOR}</span>
+					 <span><i class="fa fa-comment"></i> {NEWSCOMMENTS}</span>
+					 <!-- Remove - Can you even like posts
+					 <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+					 -->
+					 <br/>
+					 {ADMINOPTIONS: class=btn btn-default}
+				 </div>
+			 </div>
+			 <div class="col-xs-12 col-sm-9 blog-content">
+				<h2>{NEWS_TITLE: link=1}</h2>
+				<p>
+				 	{NEWS_SUMMARY}
+				</p>
+				<div class="post-tags">
+					<strong>Tags:</strong> {NEWSTAGS}
+				</div>
+			 </div>
+		 </div><!--/.row-item-->
+	</div><!--/.blog-item-->
 
-                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper.</p>
+	<div class="blog-item">
+	 {NEWS_BODY=body}
 
-                                    <div class="post-tags">
-                                        <strong>Tags:</strong> {NEWSTAGS}
-                                    </div>
-
-
-                                </div>
-                            </div>
-                    </div><!--/.blog-item-->
-					<div class="blog-item">
-						{NEWS_BODY=body}
-
-						<div class="news-videos-1">
-						{NEWSVIDEO: item=1}
-						{NEWSVIDEO: item=2}
-						{NEWSVIDEO: item=3}
-						</div>
-
-
-						<br />
-						{SETIMAGE: w=400&h=400}
-
-						<div class="row  news-images-1">
-							<div class="col-md-6">{NEWSIMAGE: item=2}</div>
-							<div class="col-md-6">{NEWSIMAGE: item=3}</div>
-						</div>
-						<div class="row news-images-2">
-							<div class="col-md-6">{NEWSIMAGE: item=4}</div>
-							<div class="col-md-6">{NEWSIMAGE: item=5}</div>
-						</div>
-
-						{NEWSVIDEO: item=4}
-						{NEWSVIDEO: item=5}
-
-					   <div class="body-extended text-justify">
-							{NEWS_BODY=extended}
-						</div>
+	 <div class="news-videos-1">
+	 {NEWSVIDEO: item=1}
+	 {NEWSVIDEO: item=2}
+	 {NEWSVIDEO: item=3}
+	 </div>
 
 
+	 <br />
+	 {SETIMAGE: w=400&h=400}
 
-					</div><!--/.blog-item-->
+	 <div class="row  news-images-1">
+		 <div class="col-md-6">{NEWSIMAGE: item=2}</div>
+		 <div class="col-md-6">{NEWSIMAGE: item=3}</div>
+	 </div>
+	 <div class="row news-images-2">
+		 <div class="col-md-6">{NEWSIMAGE: item=4}</div>
+		 <div class="col-md-6">{NEWSIMAGE: item=5}</div>
+	 </div>
 
-                        <div class="media reply_section">
-                            <div class="pull-left post_reply text-center">
-								{NEWS_AUTHOR_AVATAR: shape=circle}
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i> </a></li>
-                                </ul>
-                            </div>
-                            <div class="media-body post_reply_content">
-                                <h3>{NEWSAUTHOR}</h3>
-                                {NEWS_AUTHOR_SIGNATURE}
-                                <p><strong>Web:</strong> <a href="#">website ?</a></p>
-                            </div>
-                        </div>
+	 {NEWSVIDEO: item=4}
+	 {NEWSVIDEO: item=5}
 
-                        <h1 id="comments_title">5 Comments</h1>
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>Marsh</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div>
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/boy2.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>Marsh</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div>
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/boy3.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>Marsh</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div>
+	<div class="body-extended text-justify">
+		 {NEWS_BODY=extended}
+	 </div>
 
+	</div><!--/.blog-item-->
 
-                        <div id="contact-page clearfix">
-                            <div class="status alert alert-success" style="display: none"></div>
-                            <div class="message_heading">
-                                <h4>Leave a Replay</h4>
-                                <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
-                            </div>
+	 <div class="media reply_section">
+		 <div class="pull-left post_reply text-center">
+			 {NEWS_AUTHOR_AVATAR: shape=circle}
+			 <ul>
+				 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				 <li><a href="#"><i class="fa fa-google-plus"></i> </a></li>
+			 </ul>
+		 </div>
+		 <div class="media-body post_reply_content">
+			 <h3>{NEWSAUTHOR}</h3>
+			 {NEWS_AUTHOR_SIGNATURE}
+			 <p><strong>All Posts:</strong> <a href="{NEWS_AUTHOR_ITEMS_URL}">View more posts by this author.</a></p>
+		 </div>
+	 </div>
 
-                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                            <label>Name *</label>
-                                            <input type="text" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Email *</label>
-                                            <input type="email" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>URL</label>
-                                            <input type="url" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="form-group">
-                                            <label>Message *</label>
-                                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div><!--/#contact-page-->
+	 <h1 id="comments_title">{NEWSCOMMENTS}</h1>
+	 <div class="media comment_section">
+		 <div class="pull-left post_comments">
+			 <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
+		 </div>
+		 <div class="media-body post_reply_comments">
+			 <h3>Marsh</h3>
+			 <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			 <a href="#">Reply</a>
+		 </div>
+	 </div>
+	 <div class="media comment_section">
+		 <div class="pull-left post_comments">
+			 <a href="#"><img src="images/blog/boy2.png" class="img-circle" alt="" /></a>
+		 </div>
+		 <div class="media-body post_reply_comments">
+			 <h3>Marsh</h3>
+			 <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			 <a href="#">Reply</a>
+		 </div>
+	 </div>
+	 <div class="media comment_section">
+		 <div class="pull-left post_comments">
+			 <a href="#"><img src="images/blog/boy3.png" class="img-circle" alt="" /></a>
+		 </div>
+		 <div class="media-body post_reply_comments">
+			 <h3>Marsh</h3>
+			 <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+			 <a href="#">Reply</a>
+		 </div>
+	 </div>
+
+	 <div id="contact-page clearfix">
+		 <div class="status alert alert-success" style="display: none"></div>
+		 <div class="message_heading">
+			 <h4>Leave a Replay</h4>
+			 <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
+		 </div>
+
+		 <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+			 <div class="row">
+				 <div class="col-sm-5">
+					 <div class="form-group">
+						 <label>Name *</label>
+						 <input type="text" class="form-control" required="required">
+					 </div>
+					 <div class="form-group">
+						 <label>Email *</label>
+						 <input type="email" class="form-control" required="required">
+					 </div>
+					 <div class="form-group">
+						 <label>URL</label>
+						 <input type="url" class="form-control">
+					 </div>
+				 </div>
+				 <div class="col-sm-7">
+					 <div class="form-group">
+						 <label>Message *</label>
+						 <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+					 </div>
+					 <div class="form-group">
+						 <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+					 </div>
+				 </div>
+			 </div>
+		 </form>
+	 </div><!--/#contact-page-->
 
 	<hr />
 	{NEWSRELATED}
@@ -381,7 +352,6 @@ $NEWS_TEMPLATE['view']['item'] = '
 
 
 //$NEWS_MENU_TEMPLATE['view']['separator']   = '<br />';
-
 
 ###### news_categories.sc
 $NEWS_TEMPLATE['category']['body'] = '
