@@ -149,8 +149,6 @@ function tablestyle($caption, $text, $id='', $info=array())
 		return;
 	}
 
-
-
 	// default.
 
 	if(!empty($caption))
@@ -160,11 +158,7 @@ function tablestyle($caption, $text, $id='', $info=array())
 
 	echo $text;
 
-
-
 	return;
-
-
 
 }
 
@@ -175,29 +169,21 @@ $LAYOUT['_header_'] =  <<<TMPL
         <div class="top-bar">
             <div class="container">
                 <div class="row">
-					<div class="col-sm-6 col-xs-4">
-					    <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                       </div>
-					</div>
-					<!--
+					<!-- Social Icons -->
+					{XURL_ICONS}
+
+					<!-- Contact Number
                     <div class="col-sm-3 col-xs-4">
                         <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
                     </div>
 					-->
-					
+
 				<div class="col-sm-6 col-xs-4">
 
 				<div class="top-right-nav">
 				<ul>
 					<li><a href="#register">Register</a></li>
-				  
+
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <span class="caret" style="margin-right:10px;"></span></a>
 						<ul id="login-dp" class="dropdown-menu">
@@ -233,7 +219,7 @@ $LAYOUT['_header_'] =  <<<TMPL
 											<div class="help-block text-right"><a href="">Forgotten the password ?</a></div>
 											<div class="help-block text-right"><a href="">Resend verification ?</a></div>
 										</div>
-										
+
 								 </div>
 							</li>
 						</ul>
@@ -241,9 +227,9 @@ $LAYOUT['_header_'] =  <<<TMPL
 				</ul>
 
 				</div>
-				
+
 				</div>
-					
+
                 </div>
             </div><!--/.container-->
         </div><!--/.top-bar-->
@@ -257,15 +243,15 @@ $LAYOUT['_header_'] =  <<<TMPL
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="{SITEURL}e107_themes/corlatrix/images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="{SITEURL}"><img src="{SITEURL}e107_themes/corlatrix/images/logo.png" alt="logo"></a>
                 </div>
-				
+
                 <div class="collapse navbar-collapse navbar-right">
 					{NAVIGATION=main}
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-		
+
     </header><!--/header-->
 
 TMPL;
@@ -288,7 +274,7 @@ $LAYOUT['_footer_'] =  <<<TMPL
                             <li><a href="#">Privacy policy</a></li>
                             <li><a href="#">Contact us</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-3 col-sm-6">
@@ -303,7 +289,7 @@ $LAYOUT['_footer_'] =  <<<TMPL
                             <li><a href="#">Ticket system</a></li>
                             <li><a href="#">Billing system</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-3 col-sm-6">
@@ -318,7 +304,7 @@ $LAYOUT['_footer_'] =  <<<TMPL
                             <li><a href="#">Plugin Development</a></li>
                             <li><a href="#">Article Writing</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-3 col-sm-6">
@@ -333,7 +319,7 @@ $LAYOUT['_footer_'] =  <<<TMPL
                             <li><a href="#">Ullamco</a></li>
                             <li><a href="http://www.e107.org" target="_blank">e107</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
             </div>
         </div>
@@ -351,7 +337,7 @@ $LAYOUT['_footer_'] =  <<<TMPL
             </div>
         </div>
     </footer><!--/#footer-->
-	
+
 	<!-- Going up ? -->
 	<a id="gototop" href="#"><span class="fa fa fa-angle-up"></span></a>
 
@@ -374,11 +360,91 @@ TMPL;
 //------------------------------=[ Custom Home ]=------------------------------\\
 
 $LAYOUT['custom_home'] =  <<<TMPL
-	
+
 	{ALERTS}
-	
-	{FEATUREBOX}
-	
+
+	<section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+                <li data-target="#main-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="item active" style="background-image: url({SITEURL}e107_themes/corlatrix/images/slider/bg1.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="{SITEURL}e107_themes/corlatrix/images/slider/img1.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url({SITEURL}e107_themes/corlatrix/images/slider/bg2.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="{SITEURL}e107_themes/corlatrix/images/slider/img2.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url({SITEURL}e107_themes/corlatrix/images/slider/bg3.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="{SITEURL}e107_themes/corlatrix/images/slider/img3.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+
+    </section><!--/#main-slider-->
+
 	{WMESSAGE}
 
     <section id="feature" >
@@ -413,7 +479,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                         </div>
                     </div><!--/.col-md-4-->
-                
+
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
                             <i class="fa fa-leaf"></i>
@@ -438,7 +504,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                         </div>
                     </div><!--/.col-md-4-->
                 </div><!--/.services-->
-            </div><!--/.row-->    
+            </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#feature-->
 
@@ -458,10 +524,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme</a> </h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div>   
+                </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -471,10 +537,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -484,10 +550,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div>   
+                </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -497,11 +563,11 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div>   
-                
+                </div>
+
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
                         <img class="img-responsive" src="{SITEURL}e107_themes/corlatrix/images/portfolio/recent/item5.png" alt="">
@@ -510,10 +576,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div>   
+                </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -523,10 +589,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -536,10 +602,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div>   
+                </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -549,10 +615,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                 <a class="preview" href="{SITEURL}e107_themes/corlatrix/images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-                </div>   
+                </div>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#recent-works-->
@@ -600,7 +666,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
-                </div>  
+                </div>
 
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap wow fadeInDown">
@@ -636,7 +702,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
-                </div>                                                
+                </div>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#services-->
@@ -777,7 +843,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 wow fadeInDown">
-                   <div class="tab-wrap"> 
+                   <div class="tab-wrap">
                         <div class="media">
                             <div class="parrent pull-left">
                                 <ul class="nav nav-tabs nav-stacked">
@@ -819,7 +885,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                      <div class="tab-pane fade" id="tab3">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
                                      </div>
-                                     
+
                                      <div class="tab-pane fade" id="tab4">
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words</p>
                                      </div>
@@ -827,10 +893,10 @@ $LAYOUT['custom_home'] =  <<<TMPL
                                      <div class="tab-pane fade" id="tab5">
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,</p>
                                      </div>
-                                </div> <!--/.tab-content-->  
-                            </div> <!--/.media-body--> 
-                        </div> <!--/.media-->     
-                    </div><!--/.tab-wrap-->               
+                                </div> <!--/.tab-content-->
+                            </div> <!--/.media-body-->
+                        </div> <!--/.media-->
+                    </div><!--/.tab-wrap-->
                 </div><!--/.col-sm-6-->
 
                 <div class="col-xs-12 col-sm-4 wow fadeInDown">
@@ -868,7 +934,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
             <div class="center wow fadeInDown">
                 <h2>Our Partners</h2>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>    
+            </div>
 
             <div class="partners">
                 <ul>
@@ -878,7 +944,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                     <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="{SITEURL}e107_themes/corlatrix/images/partners/partner4.png"></a></li>
                     <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="{SITEURL}e107_themes/corlatrix/images/partners/partner5.png"></a></li>
                 </ul>
-            </div>        
+            </div>
         </div><!--/.container-->
     </section><!--/#partner-->
 
@@ -897,7 +963,7 @@ $LAYOUT['custom_home'] =  <<<TMPL
                     </div>
                 </div>
             </div>
-        </div><!--/.container-->    
+        </div><!--/.container-->
     </section><!--/#conatcat-info-->
 	{---}
 
@@ -912,22 +978,20 @@ $LAYOUT['news'] =  <<<TMPL
             <h2>Blogs</h2>
             <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
         </div>
-		
+
 		<div class="blog">
             <div class="row">
                 <div class="col-md-8">
-	{---}
+				{---}
                 </div><!--/.col-md-8-->
-	
-	
-	
+
                 <aside class="col-md-4">
                     <div class="widget search">
                         <form role="form">
                                 <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
                         </form>
                     </div><!--/.search-->
-    				
+
     				<div class="widget categories">
                         <h3 class="border-bottom-grad"><i class="fa fa-comment-o"></i> Recent Comments</h3>
                         <div class="row">
@@ -953,11 +1017,11 @@ $LAYOUT['news'] =  <<<TMPL
                                         <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
                                     </div>
                                 </div>
-                                
+
                             </div>
-                        </div>                     
+                        </div>
                     </div><!--/.recent comments-->
-                     
+
 
                     <div class="widget categories">
                         <h3 class="border-bottom-grad"><i class="fa fa-folder-open-o"></i> Categories</h3>
@@ -970,9 +1034,9 @@ $LAYOUT['news'] =  <<<TMPL
                                     <li><a href="#">Technology <span class="badge">25</span></a></li>
                                 </ul>
                             </div>
-                        </div>                     
+                        </div>
                     </div><!--/.categories-->
-    				
+
     				<div class="widget archieve">
                         <h3 class="border-bottom-grad"><i class="fa fa-archive"></i> Archieve</h3>
                         <div class="row">
@@ -984,9 +1048,9 @@ $LAYOUT['news'] =  <<<TMPL
                                     <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2013 <span class="pull-right">(08)</a></li>
                                 </ul>
                             </div>
-                        </div>                     
+                        </div>
                     </div><!--/.archieve-->
-    				
+
                     <div class="widget tags">
                         <h3 class="border-bottom-grad"><i class="fa fa-tags"></i> Tag Cloud</h3>
                         <ul class="tag-cloud">
@@ -1002,7 +1066,7 @@ $LAYOUT['news'] =  <<<TMPL
                             <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
                         </ul>
                     </div><!--/.tags-->
-    				
+
     				<div class="widget blog_gallery">
                         <h3 class="border-bottom-grad"><i class="fa fa-archive"></i> Our Gallery</h3>
                         <ul class="sidebar-gallery">
@@ -1014,24 +1078,131 @@ $LAYOUT['news'] =  <<<TMPL
                             <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
                         </ul>
                     </div><!--/.blog_gallery-->
-    			</aside> 
-	
-	
+    			</aside>
+
+
             </div><!--/.row-->
         </div><!--/.blog-->
     </section><!--/#blog-->
 
-
-
 TMPL;
 
+//------------------------------=[ Forums ]=------------------------------\\
 
 
 
 
+//------------------------------=[ Contact Us ]=------------------------------\\
+$LAYOUT['contact'] =  <<<TMPL
+
+<section id="contact-info">
+	<div class="center">
+		<h2>How to Reach Us?</h2>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+	</div>
+	<div class="gmap-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5 text-center">
+					<div class="gmap">
+						<iframe width="300" height="300" frameborder="0" style="border:0" marginheight="0" marginwidth="0" allowfullscreen
+						 	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d131984.01355465007!2d68.33027504406412!3d-73.19804959955366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzPCsDA4JzU1LjciUyA2OMKwMjUnMDIuMyJF!5e1!3m2!1sen!2suk!4v1510373156796">
+						</iframe>
+					</div>
+				</div>
+
+				<div class="col-sm-7 map-content">
+					<ul class="row">
+						<li class="col-sm-6">
+							<address>
+								<h5>Head Office</h5>
+								<p>1537 Flint Street <br>
+								Tumon, MP 96911</p>
+								<p>Phone:670-898-2847 <br>
+								Email Address:info@domain.com</p>
+							</address>
+
+							<address>
+								<h5>Zonal Office</h5>
+								<p>1537 Flint Street <br>
+								Tumon, MP 96911</p>
+								<p>Phone:670-898-2847 <br>
+								Email Address:info@domain.com</p>
+							</address>
+						</li>
 
 
+						<li class="col-sm-6">
+							<address>
+								<h5>Zone#2 Office</h5>
+								<p>1537 Flint Street <br>
+								Tumon, MP 96911</p>
+								<p>Phone:670-898-2847 <br>
+								Email Address:info@domain.com</p>
+							</address>
 
+							<address>
+								<h5>Zone#3 Office</h5>
+								<p>1537 Flint Street <br>
+								Tumon, MP 96911</p>
+								<p>Phone:670-898-2847 <br>
+								Email Address:info@domain.com</p>
+							</address>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>  <!--/gmap_area -->
+
+<section id="contact-page">
+	<div class="container">
+		<div class="center">
+			<h2>Drop Your Message</h2>
+			<p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+		<div class="row contact-wrap">
+			<div class="status alert alert-success" style="display: none"></div>
+			<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+				<div class="col-sm-5 col-sm-offset-1">
+					<div class="form-group">
+						<label>Name *</label>
+						<input type="text" name="name" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<label>Email *</label>
+						<input type="email" name="email" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<label>Phone</label>
+						<input type="number" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Company Name</label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label>Subject *</label>
+						<input type="text" name="subject" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<label>Message *</label>
+						<textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+					</div>
+				</div>
+			</form>
+		</div><!--/.row-->
+	</div><!--/.container-->
+</section><!--/#contact-page-->
+{---}
+
+TMPL;
 
 /* XXX EVERYTHING BELOW THIS POINT IS UNUSED FOR NOW */
 /**
