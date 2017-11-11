@@ -149,6 +149,45 @@ function tablestyle($caption, $text, $id='', $info=array())
 		return;
 	}
 
+	/// Sidebar Widgets \\\
+
+	// 30 none / blank
+	if($style == 'sidebar-blank')
+	{
+		echo '
+			'.$text.'
+		';
+		return;
+	}
+
+	// No HEADER 31
+	if($style == 'sidebar-no-header')
+	{
+		echo '
+		<div class="widget ">
+			'.$text.'
+		</div>';
+		return;
+	}
+	// default col-sm-6 32
+
+	// default col-sm-12 33
+
+	// default 34
+	if($style == 'sidebar')
+	{
+		echo '
+		<div class="widget ">
+			<h3 class="border-bottom-grad">'.$caption.'</h3>
+			<div class="row">
+				'.$text.'
+			</div>
+		</div>';
+		return;
+	}
+
+
+
 	// default.
 
 	if(!empty($caption))
@@ -936,104 +975,25 @@ $LAYOUT['news'] =  <<<TMPL
 		<div class="blog">
             <div class="row">
                 <div class="col-md-8">
-				{---}
+					{---}
                 </div><!--/.col-md-8-->
 
                 <aside class="col-md-4">
-                    <div class="widget search">
-                        <form role="form">
-                                <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
-                        </form>
-                    </div><!--/.search-->
+					{SETSTYLE=sidebar-blank}
+					{MENU=30}
 
-    				<div class="widget categories">
-                        <h3 class="border-bottom-grad"><i class="fa fa-comment-o"></i> Recent Comments</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="single_comments">
-                                    <img src="images/blog/avatar3.png" alt=""  />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
-                                    </div>
-                                </div>
-                                <div class="single_comments">
-                                    <img src="images/blog/avatar3.png" alt=""  />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
-                                    </div>
-                                </div>
-                                <div class="single_comments">
-                                    <img src="images/blog/avatar3.png" alt=""  />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
-                                    </div>
-                                </div>
+					{SETSTYLE=sidebar-no-header}
+					{MENU=31}
 
-                            </div>
-                        </div>
-                    </div><!--/.recent comments-->
+					{SETSTYLE=sidebar}
+					{MENU=32}
 
+					{SETSTYLE=sidebar}
+					{MENU=33}
 
-                    <div class="widget categories">
-                        <h3 class="border-bottom-grad"><i class="fa fa-folder-open-o"></i> Categories</h3>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="blog_category">
-                                    <li><a href="#">Computers <span class="badge">04</span></a></li>
-                                    <li><a href="#">Smartphone <span class="badge">10</span></a></li>
-                                    <li><a href="#">Gedgets <span class="badge">06</span></a></li>
-                                    <li><a href="#">Technology <span class="badge">25</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div><!--/.categories-->
-
-    				<div class="widget archieve">
-                        <h3 class="border-bottom-grad"><i class="fa fa-archive"></i> Archieve</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <ul class="blog_archieve">
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2013 <span class="pull-right">(97)</span></a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2013 <span class="pull-right">(32)</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> October 2013 <span class="pull-right">(19)</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2013 <span class="pull-right">(08)</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div><!--/.archieve-->
-
-                    <div class="widget tags">
-                        <h3 class="border-bottom-grad"><i class="fa fa-tags"></i> Tag Cloud</h3>
-                        <ul class="tag-cloud">
-                            <li><a class="btn btn-xs btn-primary" href="#">Apple</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Barcelona</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Office</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Ipod</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Stock</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Race</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">London</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Football</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Porche</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
-                        </ul>
-                    </div><!--/.tags-->
-
-    				<div class="widget blog_gallery">
-                        <h3 class="border-bottom-grad"><i class="fa fa-archive"></i> Our Gallery</h3>
-                        <ul class="sidebar-gallery">
-                            <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
-                        </ul>
-                    </div><!--/.blog_gallery-->
+					{SETSTYLE=sidebar}
+					{MENU=34}
     			</aside>
-
 
             </div><!--/.row-->
         </div><!--/.blog-->
