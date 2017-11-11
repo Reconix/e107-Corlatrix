@@ -362,10 +362,17 @@ class theme_shortcodes extends e_shortcode
 		//TODO Generic LANS. (not theme LANs)
 		$userNameLabel = !empty($parm['username']) ? USERNAME : '';
 
+		$text .= //Header
+		'
+		<div class="top-right-nav">
+			<ul>
+		';
+
 		$text .= //PM
 		'
-				<li><a href="messages.html"><span>Private Messages</span></a>
-					<ul class="sub-menu">
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Private Messages <span class="caret" style="margin-right:10px;"></span></a>
+					<ul id="login-dp" class="dropdown-menu">
 						{PM_NAV}
 						<li><a href="#">Conversation list</a></li>
 						<li><a href="#">Single conversation</a></li>
@@ -375,8 +382,9 @@ class theme_shortcodes extends e_shortcode
 		';
 		$text .= //Profile
 		'
-				<li><a href="{LM_PROFILE_HREF}"><i style="padding:6px;">{SETIMAGE: w=16} {USER_AVATAR: shape=circle}</i><span> '. $userNameLabel.'Profile </span></a>
-					<ul class="sub-menu">
+				<li class="dropdown">
+				  <a href="{LM_PROFILE_HREF}" class="dropdown-toggle" data-toggle="dropdown"><i style="padding:6px;">{SETIMAGE: w=16} {USER_AVATAR: shape=circle}</i> '. $userNameLabel.'Profile <span class="caret" style="margin-right:10px;"></span></a>
+					<ul id="login-dp" class="dropdown-menu">
 						<li><a href="{LM_PROFILE_HREF}">Your Profile</a></li>
 						<li><a href="{LM_USERSETTINGS_HREF}">Settings</a></li>
 						<li><a href="'.e_HTTP.'index.php?logout"> Logout</a></li>
@@ -389,6 +397,12 @@ class theme_shortcodes extends e_shortcode
 		{
 			$text .= '<li><a href="'.e_ADMIN_ABS.'"> Admin Area</a></li>';
 		}
+
+		$text .= //Footer
+		'
+			</ul>
+		</div>
+		';
 
 		return $tp->parseTemplate($text,true,$login_menu_shortcodes);
 	}
