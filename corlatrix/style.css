@@ -132,6 +132,32 @@ ul.login-buttons li a {
   font-weight: bold;
 }
 
+/* Sidebar */
+
+.news-archive-menu {
+	list-style: none outside none;
+	margin-right: 0px;
+	margin-left: 20px;
+	padding: 0;
+}
+
+.news-archive-menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.news-archive-menu li li {
+    padding: 10px 0;
+    border-bottom: none;
+}
+
+.news-archive-menu-months {
+	padding-top: 7px;
+	margin-top: 7px;
+	display: block;
+	border-top: 1px solid #f5f5f5;
+}
+
 
 /* Blog */
 
