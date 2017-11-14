@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Theme name="Corlatrix" lan="" version="1.0" date="1486670442" compatibility="2.0" livedemo="">
+<e107Theme name="Corlatrix" lan="" version="0.1" date="01-02-2017" compatibility="2.0" livedemo="">
 	<author name="Reconix" url="http://www.reconix.net" />
 	<summary lan="">Corlatrix Free Responsive Business Theme</summary>
 	<description lan="">Free bootstrap theme based off Corlate</description>
@@ -16,11 +16,15 @@
 	<layouts>
 		<layout name='default' title='Default Theme' default='true' />
 		<layout name='custom_home' title='Custom Home Page' default='false'>
-			<custompages>FRONTPAGE</custompages>	
+			<custompages>FRONTPAGE</custompages>
 		</layout>
 		<layout name='news' title='News / Blog Page'>
 			<custompages>news</custompages>
 			<custompages>/news/</custompages>
+		</layout>
+		<layout name='contact' title='Contact Us Page'>
+			<custompages>contact</custompages>
+			<custompages>/contact.php</custompages>
 		</layout>
 	</layouts>
 </e107Theme>

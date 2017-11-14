@@ -18,6 +18,8 @@
  * 	  <span class="fa fa-fw fa-{XURL_ICONS_ID} {XURL_ICONS_CLASS}"></span>
  * 	  </a>
  */
+
+// Default
  $SOCIAL_XURL_TEMPLATE['default']['start'] = '
 <div class="col-sm-6 col-xs-4">
 	<div class="social">
@@ -35,3 +37,20 @@
 	</div>
 </div>
  ';
+
+// Top Nav bar
+$SOCIAL_XURL_TEMPLATE['header']['start'] = '
+
+	   <ul class="social-share">
+';
+$SOCIAL_XURL_TEMPLATE['header']['item'] = '
+<li>
+   <a href="{XURL_ICONS_HREF}" title="{XURL_ICONS_TITLE}" target="_blank">
+	   <i class="fa fa-fw fa-{XURL_ICONS_ID} {XURL_ICONS_CLASS}"></i>
+   </a>
+</li>
+';
+$SOCIAL_XURL_TEMPLATE['header']['end'] = '
+	   </ul>
+
+';

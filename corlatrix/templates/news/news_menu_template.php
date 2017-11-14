@@ -49,7 +49,7 @@ $NEWS_MENU_TEMPLATE['archive']['end']         = '
 </div><!--/.archieve-->
 ';
 $NEWS_MENU_TEMPLATE['archive']['item']        = '
-	<li><a class="e-menu-link newscats{active}" href="{NEWS_ARCHIVE_URL}">{NEWS_ARCHIVE_TITLE} {NEWS_ARCHIVE_NEWS_COUNT}</a></li>
+	<li><a class="e-menu-link newsarch{active}" href="{NEWS_ARCHIVE_URL}">{NEWS_ARCHIVE_TITLE} {NEWS_ARCHIVE_NEWS_COUNT}</a></li>
 ';
 
 // months menu
