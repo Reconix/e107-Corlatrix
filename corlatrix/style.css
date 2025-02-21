@@ -1,14 +1,14 @@
 /* Top Nav */
 
-.login{
+.login {
 	text-align: left;
 }
 
-.social{
-  text-align: left;
+.social {
+  text-align: right;
 }
 
-.login-buttons{
+.login-buttons {
  display: inline-block;
  list-style: none;
  padding: 0;
@@ -30,62 +30,64 @@ ul.login-buttons li a {
 }
 
 
-#login-dp{
+#login-dp {
     min-width: 230px;
     padding: 14px 20px 0px 20px;
-    overflow:hidden;
-	background-color: rgba(0,0,0,.85);
-	/* Light
-    background-color:rgba(255,255,255,.8);
-	*/
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .85);
+    /* Light
+    background-color: rgba(255, 255, 255, .8);
+    */
 }
-#login-dp .help-block{
-	text-align: center;
-    font-size:12px    
+#login-dp .help-block {
+    text-align: center;
+    font-size: 12px;
 }
-#login-dp .bottom{
-    border-top:1px solid #ddd;
-    clear:both;
-    padding:1px;
+#login-dp .bottom {
+    border-top: 1px solid #ddd;
+    clear: both;
+    padding: 1px;
 }
-#login-dp .social-buttons{
-    margin:12px 0    
+#login-dp .social-buttons {
+    margin: 12px 0;
 }
-#login-dp .social-buttons a{
+#login-dp .social-buttons a {
     width: 49%;
+    text-decoration: none;
+    display: inline-block;
 }
 #login-dp .form-group {
     margin-bottom: 10px;
 }
-.btn-fb{
+.btn-fb {
     color: #fff;
-    background-color:#3b5998;
+    background-color: #3b5998;
 }
-.btn-fb:hover{
+.btn-fb:hover {
     color: #fff;
-    background-color:#496ebc 
+    background-color: #496ebc;
 }
-.btn-tw{
+.btn-tw {
     color: #fff;
-    background-color:#55acee;
+    background-color: #55acee;
 }
-.btn-tw:hover{
+.btn-tw:hover {
     color: #fff;
-    background-color:#59b5fa;
+    background-color: #59b5fa;
 }
-@media(max-width:768px){
-    #login-dp{
+@media (max-width: 768px) {
+    #login-dp {
         background-color: inherit;
         color: #fff;
     }
-    #login-dp .bottom{
+    #login-dp .bottom {
         background-color: inherit;
-        border-top:0 none;
+        border-top: 0 none;
     }
 }
 
 .top-right-nav {
-	float:right;
+	float: right;
 }
 
 .top-right-nav ul {
@@ -96,7 +98,7 @@ ul.login-buttons li a {
 
 .top-right-nav li {
     float: left;
-	marigin-right:10px;
+    margin-right: 10px;
 }
 
 .top-right-nav li a {
@@ -105,7 +107,7 @@ ul.login-buttons li a {
     text-align: center;
     padding: 4px 10px 4px 10px;
     text-decoration: none;
-	
+
 }
 
 .top-right-nav li a:hover {
@@ -161,7 +163,7 @@ ul.login-buttons li a {
 
 /* Blog */
 
-.reply_section .media-body{
+.reply_section .media-body {
    padding: 30px 15px 10px 0px;
    display: inline;
 }
@@ -180,7 +182,7 @@ ul.login-buttons li a {
   position: absolute;
   bottom: -4px;
   left: -3px;
-  
+
 }
 .border-bottom-grad:after {
   right: -3px;
