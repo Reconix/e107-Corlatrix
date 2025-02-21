@@ -22,4 +22,4 @@ Be sure to checkout what's planned for the theme and see if an idea has already 
 https://github.com/Reconix/e107-Corlatrix/projects  
 
 ## Contributors
-Jimmi08 , Reconix
+Jimmi08 , CaMer0n , Reconix
