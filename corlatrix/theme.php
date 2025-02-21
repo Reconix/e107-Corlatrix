@@ -18,6 +18,7 @@ if(!defined('e107_INIT'))
 
 define("BOOTSTRAP", 3);
 define("FONTAWESOME", 4);
+define('VIEWPORT', "width=device-width, initial-scale=1.0");
 
 e107::library('load', 'bootstrap');
 e107::library('load', 'fontawesome');
@@ -260,21 +261,7 @@ $LAYOUT['_header_'] =  <<<TMPL
 TMPL;     */
 $LAYOUT['_header_'] = '
 <header id="header">
-<div class="top-bar">
-<div class="container">
-<div class="row">
-   <div class="col-sm-6 col-xs-4">
-	   <div class="top-number"><p><i class="fa fa-phone-square"></i> {CORLATE_PHONE}</p></div>
-   </div>
-   <div class="col-sm-6 col-xs-8">
-	  <div class="social">
-		  {XURL_ICONS: template=header}
-		  {CORLATE_SEARCH}
-	  </div>
-   </div>
-</div>
-</div><!--/.container-->
-</div><!--/.top-bar-->
+{CORLATE_TOPBAR}
 <nav class="navbar navbar-inverse" role="banner">
 <div class="container">
 <div class="navbar-header">
@@ -284,7 +271,7 @@ $LAYOUT['_header_'] = '
 	   <span class="icon-bar"></span>
 	   <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="{SITEURL}">{SITELOGO}</a>
+   <a class="navbar-brand" href="{SITEURL}">{SITELOGO: h=61}</a>
 </div>
 
 <div class="collapse navbar-collapse navbar-right">
@@ -304,6 +291,9 @@ $LAYOUT['_footer_'] =  <<<TMPL
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
+			{NAVIGATION=alt}
+
+
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
                         <h3>Company</h3>
@@ -363,6 +353,7 @@ $LAYOUT['_footer_'] =  <<<TMPL
                         </ul>
                     </div>
                 </div><!--/.col-md-3-->
+
             </div>
         </div>
     </section><!--/#bottom-->

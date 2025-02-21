@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Theme name="Corlatrix" lan="" version="0.1" date="01-02-2017" compatibility="2.0" livedemo="">
+<e107Theme name="Corlatrix" version="0.3" date="01-02-2017" compatibility="2.0" livedemo="">
 	<author name="Reconix" url="http://www.reconix.net" />
-	<summary lan="">Corlatrix Free Responsive Business Theme</summary>
-	<description lan="">Free bootstrap theme based off Corlate</description>
+	<summary>Corlatrix Free Responsive Business Theme</summary>
+	<description>Free bootstrap theme based off Corlate</description>
 	<category>corporate</category>
 	<keywords>
 		<word>business</word>

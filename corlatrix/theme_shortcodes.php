@@ -13,9 +13,41 @@
 class theme_shortcodes extends e_shortcode
 {
 	// public $override = true;
+	private $themePref = null;
 
 	function __construct()
 	{
+
+		$this->themePref = e107::pref('theme');
+	}
+
+	function sc_corlate_topbar()
+	{
+
+		if(!$this->themePref['topbar'])
+		{
+			return null;
+		}
+
+		$text = '
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-xs-4">
+						<div class="top-number"><p><i class="fa fa-phone-square"></i> {CORLATE_PHONE}</p></div>
+					</div>
+					<div class="col-sm-6 col-xs-8">
+						<div class="social">
+							{XURL_ICONS: template=header}
+							{CORLATE_SEARCH}
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+		</div><!--/.top-bar-->
+		';
+
+		return e107::getParser()->parseTemplate($text,true);
 
 	}
 
@@ -23,11 +55,17 @@ class theme_shortcodes extends e_shortcode
 	function sc_corlate_phone()
 	{
 		$phone = e107::pref('theme', 'phone');
+
+		if(empty($phone))
+		{
+			return '0123546789';
+		}
+
 		return $phone;
 	}
 
 	// Search
-	function sc_corlate_search($parm = NULL)
+	function sc_corlate_search($parm = array())
 	{
 	    // todo fix languages call new way
 	    include_lan(e_PLUGIN."search_menu/languages/".e_LANGUAGE.".php");
@@ -47,13 +85,15 @@ class theme_shortcodes extends e_shortcode
 	// Top Right Nav
 	function sc_top_right_nav($parm='')
 	{
-		include_lan(e_PLUGIN."login_menu/languages/".e_LANGUAGE.".php");
+		include_lan(e_PLUGIN."login_menu/languages/".e_LANGUAGE.".php"); //deprecated ??
 
 		$tp = e107::getParser();
 		require(e_PLUGIN."login_menu/login_menu_shortcodes.php"); // don't use 'require_once'.
 		$direction = vartrue($parm['dir']) == 'up' ? ' dropup' : '';
 
 		$userReg = defset('USER_REGISTRATION');
+
+		$text = '';
 
 		if(!USERID) // Logged Out.
 		{
@@ -201,7 +241,7 @@ class theme_shortcodes extends e_shortcode
 	  	$text = '&copy; '. $copyYear . (($copyYear != $curYear) ? ' - ' . $curYear : '');
 
 	  	$text .= ' '.$sitedisclaimer;
-       
+
 	  	return e107::getParser()->toHtml($text, true, 'SUMMARY');
   	}
 
