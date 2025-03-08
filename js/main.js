@@ -56,7 +56,7 @@ jQuery(function($) {'use strict',
 
 	// goto top
 	// Check to see if the window is top if not then display button
-	$(window).scroll(function(){
+	$(window).on('scroll', function() {
 		if ($(this).scrollTop() > 100) {
 			$('#gototop').fadeIn();
 		} else {
@@ -65,9 +65,9 @@ jQuery(function($) {'use strict',
 	});
 
 	// Click event to scroll to top
-	$('#gototop').click(function(){
-		$('html, body').animate({scrollTop : 0},900);
-		return false;
+	$('#gototop').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({scrollTop: 0}, 900);
 	});
 
 	// Pretty Photo

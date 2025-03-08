@@ -2676,12 +2676,12 @@ shortcodes page css
   background-image: -o-linear-gradient(left, rgba(197, 45, 47, 0.54), transparent);
 }
 #gototop {
-	position:fixed;
-	right: 10px;
-	bottom: 10px;
-	z-index:99;
-	cursor:pointer;
-	font-size:22px;
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 22px;
 	background-color:rgba(0,0,0,.8);
 	border-radius: 3px;
 	display: none;
@@ -2690,9 +2690,9 @@ shortcodes page css
 #gototop span {
 	width: 40px;
 	height: 40px;
-	text-align:center;
+	text-align: center;
 	line-height: 38px;
-	display:block;
+	display: block;
 	color:#fff;
 }
 #gototop span:hover {
