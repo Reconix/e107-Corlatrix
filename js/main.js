@@ -20,15 +20,17 @@ jQuery(function($) {'use strict',
 	new WOW().init();
 
 	// portfolio filter
-	$(window).load(function(){'use strict';
+	$(window).on('load', function() {
+		'use strict';
 		var $portfolio_selectors = $('.portfolio-filter >li>a');
 		var $portfolio = $('.portfolio-items');
+
 		$portfolio.isotope({
-			itemSelector : '.portfolio-item',
-			layoutMode : 'fitRows'
+			itemSelector: '.portfolio-item',
+			layoutMode: 'fitRows'
 		});
-		
-		$portfolio_selectors.on('click', function(){
+
+		$portfolio_selectors.on('click', function() {
 			$portfolio_selectors.removeClass('active');
 			$(this).addClass('active');
 			var selector = $(this).attr('data-filter');
@@ -52,9 +54,9 @@ jQuery(function($) {'use strict',
 			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
 		});
 	});
-	
-	//goto top
-	//Check to see if the window is top if not then display button
+
+	// goto top
+	// Check to see if the window is top if not then display button
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
 			$('#gototop').fadeIn();
@@ -62,15 +64,15 @@ jQuery(function($) {'use strict',
 			$('#gototop').fadeOut();
 		}
 	});
-	
-	//Click event to scroll to top
+
+	// Click event to scroll to top
 	$('#gototop').click(function(){
 		$('html, body').animate({scrollTop : 0},900);
 		return false;
 	});
 
-	//Pretty Photo
+	// Pretty Photo
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		social_tools: false
-	});	
+	});
 });
