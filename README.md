@@ -1,7 +1,11 @@
-# e107-Corlatrix
-e107 Theme | Corlatrix
+# Corlatrix
+HTML Theme | Corlatrix
 
 A slightly edited free version of Corlate
+
+# Versions
+Default HTML
+e107 Port
 
 ## Source
 https://shapebootstrap.net/item/1524962-corlate-free-responsive-business-html-template
