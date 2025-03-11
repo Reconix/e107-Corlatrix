@@ -427,67 +427,61 @@
             </div>
         </div>
     </section>
+
     <section id="middle">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 wow fadeInDown">
+            <div class="row g-4">
+                <div class="col-sm-6 col-12 wow fadeInDown">
                     <div class="skill">
                         <h2>Our Skills</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="progress-wrap">
-                            <h3>Graphic Design</h3>
-                            <div class="progress">
-                                <div class="progress-bar color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                    <span class="bar-width">85%</span>
+                        <div class="modern-progress-wrap">
+                            <div class="modern-progress">
+                                <h3>Graphic Design <span class="progress-value">85%</span></h3>
+                                <div class="progress-container">
+                                    <div class="progress-fill color1" style="width: 85%;"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="progress-wrap">
-                            <h3>HTML</h3>
-                            <div class="progress">
-                                <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                                    <span class="bar-width">95%</span>
+                            <div class="modern-progress">
+                                <h3>HTML <span class="progress-value">95%</span></h3>
+                                <div class="progress-container">
+                                    <div class="progress-fill color2" style="width: 95%;"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="progress-wrap">
-                            <h3>CSS</h3>
-                            <div class="progress">
-                                <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                    <span class="bar-width">80%</span>
+                            <div class="modern-progress">
+                                <h3>CSS <span class="progress-value">80%</span></h3>
+                                <div class="progress-container">
+                                    <div class="progress-fill color3" style="width: 80%;"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="progress-wrap">
-                            <h3>Wordpress</h3>
-                            <div class="progress">
-                                <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                                    <span class="bar-width">90%</span>
+                            <div class="modern-progress">
+                                <h3>Wordpress <span class="progress-value">90%</span></h3>
+                                <div class="progress-container">
+                                    <div class="progress-fill color4" style="width: 90%;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 wow fadeInDown">
+                <!-- Accordion section unchanged -->
+                <div class="col-sm-6 col-12 wow fadeInDown">
                     <div class="accordion">
                         <h2>Why People like us?</h2>
-                        <div class="panel-group" id="accordion1">
-                            <div class="panel panel-default">
-                                <div class="panel-heading active">
-                                    <h3 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
-                                            Lorem ipsum dolor sit amet
-                                            <i class="fa fa-angle-right pull-right"></i>
-                                        </a>
-                                    </h3>
-                                </div>
-                                <div id="collapseOne1" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <div class="media accordion-inner">
-                                            <div class="pull-left">
-                                                <img class="img-responsive" src="images/accordion1.png">
+                        <div class="accordion" id="accordion1">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1">
+                                        Lorem ipsum dolor sit amet
+                                        <i class="fa fa-angle-down ms-auto"></i>
+                                    </button>
+                                </h3>
+                                <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                                    <div class="accordion-body">
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img class="img-fluid" src="images/accordion1.png" alt="Accordion Image">
                                             </div>
-                                            <div class="media-body">
+                                            <div class="flex-grow-1">
                                                 <h4>Adipisicing elit</h4>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
                                             </div>
@@ -495,47 +489,41 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
-                                            Lorem ipsum dolor sit amet
-                                            <i class="fa fa-angle-right pull-right"></i>
-                                        </a>
-                                    </h3>
-                                </div>
-                                <div id="collapseTwo1" class="panel-collapse collapse">
-                                    <div class="panel-body">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1">
+                                        Lorem ipsum dolor sit amet
+                                        <i class="fa fa-angle-down ms-auto"></i>
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                    <div class="accordion-body">
                                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
-                                            Lorem ipsum dolor sit amet
-                                            <i class="fa fa-angle-right pull-right"></i>
-                                        </a>
-                                    </h3>
-                                </div>
-                                <div id="collapseThree1" class="panel-collapse collapse">
-                                    <div class="panel-body">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1">
+                                        Lorem ipsum dolor sit amet
+                                        <i class="fa fa-angle-down ms-auto"></i>
+                                    </button>
+                                </h3>
+                                <div id="collapseThree1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                    <div class="accordion-body">
                                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
-                                            Lorem ipsum dolor sit amet
-                                            <i class="fa fa-angle-right pull-right"></i>
-                                        </a>
-                                    </h3>
-                                </div>
-                                <div id="collapseFour1" class="panel-collapse collapse">
-                                    <div class="panel-body">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1">
+                                        Lorem ipsum dolor sit amet
+                                        <i class="fa fa-angle-down ms-auto"></i>
+                                    </button>
+                                </h3>
+                                <div id="collapseFour1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                    <div class="accordion-body">
                                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
                                     </div>
                                 </div>
@@ -546,42 +534,71 @@
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const progressItems = document.querySelectorAll('.modern-progress');
+          const offsetAdjustment = 35; // Adjust this value (in pixels) to fine-tune
+          progressItems.forEach(item => {
+            const fill = item.querySelector('.progress-fill');
+            const value = item.querySelector('.progress-value');
+            const container = item.querySelector('.progress-container');
+
+            if (fill && value && container) {
+              const fillWidth = parseFloat(fill.style.width) || 0;
+              const containerWidth = container.offsetWidth;
+              const fillEndPosition = (fillWidth / 100) * containerWidth;
+              const badgeWidth = value.offsetWidth;
+              const badgePosition = fillEndPosition - (badgeWidth / 2) + offsetAdjustment;
+
+              const rightValue = Math.max(containerWidth - badgePosition, badgeWidth / 2);
+              value.style.right = `${rightValue}px`;
+
+              // Animate the fill
+              fill.style.width = '0';
+              setTimeout(() => {
+                fill.style.width = `${fillWidth}%`;
+              }, 100);
+            }
+          });
+        });
+    </script>
+
     <section id="content">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 wow fadeInDown">
-                    <div class="tab-wrap">
-                        <div class="media">
-                            <div class="parrent pull-left">
-                                <ul class="nav nav-tabs nav-stacked">
-                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">Responsive Web Design</a></li>
-                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Premium Plugin Included</a></li>
-                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Predefine Layout</a></li>
-                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Our Philosopy</a></li>
-                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">What We Do?</a></li>
+            <div class="row g-4">
+                <div class="col-sm-8 col-12 wow fadeInDown">
+                    <div class="tab-wrap border">
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="flex-shrink-0">
+                                <ul class="nav nav-tabs nav-stacked border-0">
+                                    <li class="nav-item"><a href="#tab1" class="nav-link analistic-01" data-bs-toggle="tab">Responsive Web Design</a></li>
+                                    <li class="nav-item active"><a href="#tab2" class="nav-link analistic-02 active" data-bs-toggle="tab">Premium Plugin Included</a></li>
+                                    <li class="nav-item"><a href="#tab3" class="nav-link tehnical" data-bs-toggle="tab">Predefine Layout</a></li>
+                                    <li class="nav-item"><a href="#tab4" class="nav-link tehnical" data-bs-toggle="tab">Our Philosophy</a></li>
+                                    <li class="nav-item"><a href="#tab5" class="nav-link tehnical" data-bs-toggle="tab">What We Do?</a></li>
                                 </ul>
                             </div>
-                            <div class="parrent media-body">
-                                <div class="tab-content">
+                            <div class="flex-grow-1">
+                                <div class="tab-content p-3">
                                     <div class="tab-pane fade" id="tab1">
-                                        <div class="media">
-                                            <div class="pull-left">
-                                                <img class="img-responsive" src="images/tab2.png">
+                                        <div class="d-flex flex-row align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img class="img-fluid" src="images/tab2.png" alt="Responsive Web Design">
                                             </div>
-                                            <div class="media-body">
+                                            <div class="flex-grow-1">
                                                 <h2>Adipisicing elit</h2>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.</p>
+                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use.</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade active in" id="tab2">
-                                        <div class="media">
-                                            <div class="pull-left">
-                                                <img class="img-responsive" src="images/tab1.png">
+                                    <div class="tab-pane fade show active" id="tab2">
+                                        <div class="d-flex flex-row align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img class="img-fluid" src="images/tab1.png" alt="Premium Plugin Included">
                                             </div>
-                                            <div class="media-body">
+                                            <div class="flex-grow-1">
                                                 <h2>Adipisicing elit</h2>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.</p>
+                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -589,34 +606,34 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
                                     </div>
                                     <div class="tab-pane fade" id="tab4">
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words</p>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words</p>
                                     </div>
                                     <div class="tab-pane fade" id="tab5">
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,</p>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 wow fadeInDown">
+                <div class="col-sm-4 col-12 wow fadeInDown">
                     <div class="testimonial">
                         <h2>Testimonials</h2>
-                        <div class="media testimonial-inner">
-                            <div class="pull-left">
-                                <img class="img-responsive img-circle" src="images/testimonials1.png">
+                        <div class="testimonial-inner d-flex align-items-center mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <img class="img-fluid rounded-circle" src="images/testimonials1.png" alt="Testimonial 1">
                             </div>
-                            <div class="media-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            <div class="flex-grow-1">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                                 <span><strong>-John Doe/</strong> Director of corlate.com</span>
                             </div>
                         </div>
-                        <div class="media testimonial-inner">
-                            <div class="pull-left">
-                                <img class="img-responsive img-circle" src="images/testimonials1.png">
+                        <div class="testimonial-inner d-flex align-items-center">
+                            <div class="flex-shrink-0 me-3">
+                                <img class="img-fluid rounded-circle" src="images/testimonials1.png" alt="Testimonial 2">
                             </div>
-                            <div class="media-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            <div class="flex-grow-1">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                                 <span><strong>-John Doe/</strong> Director of corlate.com</span>
                             </div>
                         </div>
@@ -625,6 +642,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Partners -->
     <section id="partner">
         <div class="container">
             <div class="center wow fadeInDown">
@@ -632,17 +651,19 @@
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             <div class="partners">
-                <ul>
-                    <li><a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png"></a></li>
-                    <li><a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/partner2.png"></a></li>
-                    <li><a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/partner3.png"></a></li>
-                    <li><a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png"></a></li>
-                    <li><a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/partner5.png"></a></li>
+                <ul class="list-unstyled d-flex flex-wrap justify-content-between gap-4">
+                    <li><a href="#" class="d-block"><img class="img-fluid wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png" alt="Partner 1"></a></li>
+                    <li><a href="#" class="d-block"><img class="img-fluid wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/partner2.png" alt="Partner 2"></a></li>
+                    <li><a href="#" class="d-block"><img class="img-fluid wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/partner3.png" alt="Partner 3"></a></li>
+                    <li><a href="#" class="d-block"><img class="img-fluid wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png" alt="Partner 4"></a></li>
+                    <li><a href="#" class="d-block"><img class="img-fluid wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/partner5.png" alt="Partner 5"></a></li>
                 </ul>
             </div>
         </div>
     </section>
-    <section id="conatcat-info">
+
+    <!-- Contact Info -->
+    <section id="contact-info">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-12">
@@ -659,6 +680,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Links -->
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row g-4">
