@@ -331,6 +331,7 @@ input.search-form:hover {
 *******Home Page******
 **************************/
 
+/* Slider */
 #main-slider {
   position: relative;
 }
@@ -341,11 +342,11 @@ input.search-form:hover {
 }
 
 #main-slider .carousel .carousel-content {
-  margin-top: 9.375rem; /* 150px */
+  margin-top: 150px;
 }
 
 #main-slider .carousel .slide-margin {
-  margin-top: 8.75rem; /* 140px */
+  margin-top: 140px;
 }
 
 #main-slider .carousel h2 {
@@ -353,127 +354,182 @@ input.search-form:hover {
 }
 
 #main-slider .carousel .btn-slide {
-  padding: 0.5rem 1.25rem;
+  padding: 8px 20px;
   background: #c52d2f;
   color: #fff;
   border-radius: 4px;
-  margin-top: 1.5625rem; /* 25px */
+  margin-top: 25px;
   display: inline-block;
+  text-decoration: none;
 }
 
 #main-slider .carousel .slider-img {
   text-align: right;
-  position: absolute;
 }
 
+/* Updated for Bootstrap 5 */
 #main-slider .carousel .carousel-item {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 45.625rem; /* 730px */
-  transition: opacity ease-in-out 500ms;
+  height: 730px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #main-slider .carousel .carousel-item.active {
+  z-index: 1;
+}
+
+/* Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #c52d2f;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 1;
 }
 
-#main-slider .carousel-control-prev,
-#main-slider .carousel-control-next {
-  position: absolute;
-  top: 50%;
-  background-color: #c52d2f;
-  color: #fff;
-  width: 2.5rem; /* 40px */
-  height: 2.5rem;
-  line-height: 2.5rem;
-  text-align: center;
-  border-radius: 4px;
-  margin-top: -1.25rem; /* -25px */
-}
-
-#main-slider .carousel-control-prev:hover,
-#main-slider .carousel-control-next:hover {
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   background-color: #000;
 }
 
-#main-slider .carousel-control-prev {
-  left: 0.625rem; /* 10px */
+.carousel-control-prev {
+  left: 10px;
 }
 
-#main-slider .carousel-control-next {
-  right: 0.625rem; /* 10px */
+.carousel-control-next {
+  right: 10px;
 }
 
-#main-slider .carousel-indicators [data-bs-target] {
-  width: 1.25rem; /* 20px */
-  height: 1.25rem;
-  background-color: #fff;
-  margin: 0 0.9375rem 0 0; /* 15px */
-  position: relative;
-}
-
-#main-slider .carousel-indicators [data-bs-target]::after {
-  content: "";
-  position: absolute;
-  width: 1.5rem; /* 24px */
-  height: 1.5rem;
-  border-radius: 100%;
+/* Indicators */
+/* No idea how that double border indent works on old BS3 but not BS5
+   Tried box shadow trick, seems to work for now ?
+*/
+.carousel-indicators [data-bs-target] {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   border: 1px solid #fff;
-  left: -0.1875rem; /* -3px */
-  top: -0.1875rem;
+  background-color: #fff !important;
+  box-shadow: inset 0 0 0 1px #5d5d5d;
 }
 
-#main-slider .carousel-indicators .active {
-  background-color: #c52d2f;
-  border: 1px solid #c52d2f;
+.carousel-indicators .active {
+  background-color: #c52d2f !important;
+  box-shadow: none;
+  border: none;
 }
 
-#main-slider .carousel-indicators .active::after {
-  background: #c52d2f;
-  border: 1px solid #c52d2f;
+/* Animations */
+#main-slider .carousel .carousel-item.active .animation.animated-item-1 {
+  animation: fadeInUp 300ms linear 300ms both;
 }
 
-/* Animation from responsive.css ? */
+#main-slider .carousel .carousel-item.active .animation.animated-item-2 {
+  animation: fadeInUp 300ms linear 600ms both;
+}
+
+#main-slider .carousel .carousel-item.active .animation.animated-item-3 {
+  animation: fadeInUp 300ms linear 900ms both;
+}
+
+#main-slider .carousel .carousel-item.active .animation.animated-item-4 {
+  animation: fadeInUp 300ms linear 1200ms both;
+}
+
+/* FadeInUp Animation */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
+
+/* Feature */
 
 #feature {
   background: #f2f2f2;
+  padding: 4.375rem 0; /* 70px */
   padding-bottom: 2.5rem; /* 40px */
 }
 
-.feature-wrap {
-  margin-bottom: 2.1875rem; /* 35px */
+#feature .text-center h2 {
+  font-size: 2.25rem; /* 36px */
+  color: #4e4e4e;
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+#feature .text-center p.lead {
+  font-size: 1rem; /* 16px */
+  color: #858586;
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+#feature .features {
+  padding: 0;
+}
+
+#feature .feature-wrap {
+  margin-bottom: 1.1875rem;
   overflow: hidden;
 }
 
-.feature-wrap h2 {
-  margin-top: 0.625rem; /* 10px */
-}
-
-.feature-wrap i {
+#feature .feature-wrap i {
   font-size: 3rem; /* 48px */
   height: 6.875rem; /* 110px */
-  width: 6.875rem;
-  line-height: 6.875rem;
+  width: 7.875rem;
+  margin: 0.1875rem; /* 3px */
+  border-radius: 50%;
+  line-height: 6.875rem; /* 110px */
   text-align: center;
   background: #ffffff;
   color: #c52d2f;
-  border: 3px solid #ffffff;
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 5px #f2f2f2;
-  transition: 500ms;
+  border: 0.1875rem solid #ffffff; /* 3px */
+  box-shadow: inset 0 0 0 0.3125rem #f2f2f2; /* 5px inset shadow */
+  transition: all 0.5s ease; /* 500ms */
 }
 
-.feature-wrap i:hover {
+#feature .feature-wrap i:hover {
   background: #c52d2f;
   color: #fff;
-  box-shadow: inset 0 0 0 5px #c52d2f;
-  border: 3px solid #c52d2f;
+  box-shadow: inset 0 0 0 0.3125rem #c52d2f; /* 5px inset shadow */
+  border: 0.1875rem solid #c52d2f; /* 3px */
 }
+
+#feature .feature-wrap h2 {
+  font-size: 1.25rem; /* 20px */
+  color: #4e4e4e;
+  margin-top: 0.625rem; /* 10px */
+  margin-bottom: 0.625rem; /* 10px */
+}
+
+#feature .feature-wrap p {
+  font-size: 0.875rem; /* 14px */
+  color: #858586;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  #feature .feature-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #feature .feature-wrap i {
+    margin-bottom: 1rem; /* 16px */
+  }
+}
+
+/* Recent Works */
 
 #recent-works {
   padding-bottom: 4.375rem; /* 70px */
@@ -500,7 +556,15 @@ input.search-form:hover {
 
 .recent-work-wrap .recent-work-inner h3 a {
   font-size: 1.5rem; /* 24px */
+  text-decoration: none;
   color: #fff;
+}
+.recent-work-wrap .recent-work-inner .preview {
+  text-decoration: none !important;
+}
+.recent-work-wrap .recent-work-inner .preview:hover {
+  padding-left: 3px;
+  text-decoration: none !important;
 }
 
 .recent-work-wrap .overlay {
